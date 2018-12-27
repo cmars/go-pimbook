@@ -18,7 +18,7 @@ func New(coeff ...*big.Rat) *Poly {
 }
 
 // New creates a new polynomial from integer coefficients.
-func NewInt64(coeff ...int64) *Poly {
+func NewInt(coeff ...int64) *Poly {
 	ratCoeff := make([]*big.Rat, len(coeff))
 	for i := range coeff {
 		ratCoeff[i] = big.NewRat(coeff[i], 1)
