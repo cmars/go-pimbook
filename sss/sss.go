@@ -27,7 +27,7 @@ func Split(secret []byte, n, k int) ([]*poly.Point, error) {
 	return points, nil
 }
 
-func Reveal(points []*poly.Point) ([]byte, error) {
+func Reveal(points ...*poly.Point) ([]byte, error) {
 	p, err := poly.Interpolate(points...)
 	if err != nil {
 		return nil, err
